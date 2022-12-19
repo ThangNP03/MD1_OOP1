@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html langZ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone storage area</title>
+</head>
+<body>
+<script>
+  class Phone{
+    Pin;
+
+    TinNhanDen;
+    TinNhanGui;
+    CheckON;
+    CheckOf;
+    Sac;
+    Soantin;
+    GuiTin;
+    Xemtin;
+    TinDaGui;
+    GiamPin;
+    constructor(Pin,TinNhanDen,TinNhanGui,CheckON,CheckOf,Sac,Soantin,GuiTin
+    ,Xemtin,TinDaGui,GiamPin) {
+        this.Pin = Pin;
+        this.TinNhanDen = TinNhanDen;
+        this.TinNhanGui = TinNhanGui;
+        this.CheckON = CheckON;
+        this.CheckOf = CheckOf;
+        this.Sac = Sac;
+        this.Soantin = Soantin;
+        this.GuiTin = GuiTin;
+        this.Xemtin = Xemtin;
+        this.TinDaGui = TinDaGui;
+        this.GiamPin = GiamPin;
+    }
+    setPin(Pin){
+        return this.Pin = Pin;
+    }
+    getPin(){
+        return this.Pin;
+    }
+    setTinNhanDen(TinNhanDen){
+        return this.TinNhanDen = TinNhanDen;
+    }
+    getTinNhanDen(){
+        return this.TinNhanDen ;
+    }
+    setTinNhanGui(TinNhanGui){
+        return this.TinNhanGui = TinNhanGui;
+    }
+    getTinNhanGui(){
+          return this.TinNhanGui ;
+      }
+    setCheckOn(CheckON){
+        CheckON = true;
+        alert('Máy đang được bật');
+        return this.CheckON = CheckON;
+    }
+    getCheckON(){
+        return this.CheckON;
+    }
+    setCheckOf(CheckOf){
+        CheckOf = true;
+        alert('Máy đã được tắt ');
+        return this.CheckOf = CheckOf;
+    }
+    setSac(Sac){
+        return this.Sac = Sac;
+    }
+    getSac(){
+        return this.Sac;
+    }
+    setSoantin(Soantin){
+        return this.Soantin = Soantin;
+    }
+    getSoantin(){
+        return this.Soantin;
+    }
+    setGuiTin(GuiTin){
+        GuiTin = true;
+        alert('Tin nhắn đã được gửi ');
+        return this.GuiTin = GuiTin ;
+    }
+    getGuiTin(){
+        return this.GuiTin ;
+    }
+    setXemtin(Xemtin){
+        return this.Xemtin= Xemtin;
+    }
+    getXemtin(){
+        return  this.Xemtin;
+    }
+    setTinDaGui(TinDaGui){
+        return this.TinDaGui = TinDaGui;
+    }
+    getTinDaGui(){
+        return this.TinDaGui;
+    }
+     setGiamPin(GiamPin){
+         GiamPin = this.Pin + this.CheckON - 1;
+         return this.GiamPin = GiamPin;
+     }
+     getGiamPin(){
+        return this.GiamPin;
+     }
+  }
+
+  let phone = new Phone();
+  phone.setPin(100+ "%")
+
+  phone.setTinNhanDen("Hiện không có tin nhắn  đến ")
+  phone.setXemtin("Bạn đang xem tin nhắn của lớp ")
+  phone.setSoantin("Bạn đang soạn tin đến nhóm lớp ")
+  phone.setCheckOn(true)
+  phone.setTinDaGui("nhóm lớp đã nhận đưực tin nhắn ")
+  phone.setGuiTin("Bạn đẹp trai nhất ")
+  document.write("Pin của máy bạn hiện tại là "+ phone.getPin() + "<br>" )
+  document.write(phone.getTinNhanDen() + phone.getGuiTin() + phone.getTinDaGui())
+</script>
+</body>
+</html>

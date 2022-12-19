@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice drawing simple shapes</title>
+</head>
+<body>
+<div style="text-align: center">
+  <canvas id ="myCanvas" width="680" height="500" style="border: 1px solid"></canvas>
+</div>
+<script>
+  let canvas = document.getElementById('myCanvas');
+  let ctx = canvas.getContext('2d');
+  class HCN{
+      PositionX;
+      PositionY;
+      Width;
+      Height;
+      constructor(PositionX, PositionY, Width, Height) {
+          this.PositionX = PositionX;
+          this.PositionY = PositionY;
+          this.Width = 160;
+          this.Height = 70;
+          this.Draw = function () {
+              ctx.beginPath();
+              ctx.strokeStyle = 'black';
+              ctx.fillStyle = 'aqua';
+              ctx.strokeRect(this.PositionX,this.PositionY,this.Width, this.Height);
+              ctx.fillRect(this.PositionX,this.PositionY,this.Width, this.Height);
+              ctx.fill();
+              ctx.closePath();
+          }
+      }
+      setPositionX(PositionX){
+          return this.PositionX = PositionX ;
+      }
+      setPositionY(PositionY){
+          return this.PositionY = PositionY;
+      }
+  }
+  let hcn1 = new HCN();
+  hcn1.setPositionX(0);
+  hcn1.setPositionY(0)
+  for (let i = 0; i < 3; i++) {
+      hcn1.Draw();
+      hcn1.PositionX += 260;
+  }
+
+  // let hcn2 = new HCN();
+  // hc
+
+  class HinhTron {
+      PositionX;
+      PositionY;
+      Width;
+      Height;
+
+      constructor(PositionX, PositionY, Width, Height) {
+          this.PositionX = PositionX;
+          this.PositionY = PositionY;
+          this.Width = 80;
+          this.Height = 100;
+          this.Draw = function (){
+              ctx.beginPath();
+              ctx.fillStyle = 'red';
+              ctx.strokeStyle= 'blue';
+              ctx.arc(this.PositionX, this.PositionY, 30, 0, 2 * Math.PI, false);
+              ctx.stroke();
+              ctx.fill();
+              ctx.closePath();
+          }
+      }
+      setPositionX(PositionX){
+          return this.PositionX = PositionX;
+      }
+      setPositionY(PositionY){
+          return this.PositionY = PositionY
+      }
+  }
+  let hinhtron1 = new HinhTron();
+  hinhtron1.setPositionX(80);
+  hinhtron1.setPositionY(100);
+  // hinhtron1.Draw();
+  for (let i = 0; i < 3; i++) {
+      hinhtron1.Draw();
+      hinhtron1.PositionX += 260;
+  }
+ //  class Rec {
+ //      PositionX;
+ //      PositionY;
+ //      Width;
+ //      Height;
+ //      Draw;
+ //      constructor(PositionX, PositionY, Width, Height) {
+ //          this.PositionX = PositionX;
+ //          this.PositionY = PositionY;
+ //          this.Width = 160;
+ //          this.Height = 70;
+ //          this.Draw = function () {
+ //              ctx.beginPath();
+ //              ctx.strokeStyle = 'black';
+ //              ctx.fillStyle = 'aqua';
+ //              ctx.fillRect(this.PositionX, this.PositionY,this.Width, this.Height);
+ //              ctx.fill();
+ //              ctx.stroke();
+ //              ctx.closePath();
+ //          }
+ //      }
+ //      setPositionX(PositionX) {
+ //          return this.PositionX = PositionX;
+ //      }
+ //      setPositionY(PositionY) {
+ //          return this.PositionY = PositionY;
+ //      }
+ //  }
+ //  let Recn1= new Rec();
+ //  Recn1.setPositionX(0);
+ //  Recn1.setPositionY(0);
+ //  for (let i = 0; i < 3; i++) {
+ //      Recn1.Draw();
+ //      Recn1.PositionX += 260;
+ //  }
+ //
+ //  let RecHcn = new Rec();
+ //  RecHcn.setPositionX(0);
+ //  RecHcn.setPositionY(430);
+ //  for (let i = 0; i < 3; i++) {
+ //      RecHcn.Draw()
+ //      RecHcn.PositionX += 260;
+ //  }
+ //
+ //  class HinhTron {
+ //     PositionX;
+ //     PositionY;
+ //     Width;
+ //     Height;
+ //     constructor(PositionX, PositionY, Width, Height) {
+ //         this.PositionX = PositionX;
+ //         this.PositionY = PositionY;
+ //         this.Width = 80;
+ //         this.Height = 100;
+ //         this.Draw = function () {
+ //             ctx.beginPath();
+ //             ctx.strokeStyle = 'blue';
+ //             ctx.fillStyle = 'red';
+ //             ctx.arc(this.PositionX, this.PositionY, 30, 0, 2 * Math.PI, false)
+ //             ctx.fill();
+ //             ctx.stroke();
+ //             ctx.closePath();
+ //         }
+ //     }
+ //     setPositionX(PositionX) {
+ //         return this.PositionX = PositionX;
+ //     }
+ //
+ //     setPositionY(PositionY) {
+ //         return this.PositionY = PositionY;
+ //     }
+ // }
+ //  let HinhTron1= new HinhTron();
+ //  HinhTron1.setPositionX(80);
+ //  HinhTron1.setPositionY(100);
+ //  for (let i = 0; i < 3; i++) {
+ //      HinhTron1.Draw();
+ //      HinhTron1.PositionX += 260;
+ //  }
+ //
+ //  let HinhTron2 = new HinhTron();
+ //  HinhTron2.setPositionX(80)
+ //  HinhTron2.setPositionY(400)
+ //  for (let i = 0; i < 3; i++) {
+ //      HinhTron2.Draw();
+ //      HinhTron2.PositionX += 260;
+ //  }
+</script>
+</body>
+</html>

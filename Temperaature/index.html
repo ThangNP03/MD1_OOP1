@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+  class Temperature{
+    PoisonC;
+    DegreesF;
+    Kenvin;
+    constructor(PoisonC,DegreesF,Kenvin) {
+       this.Kenvin = PoisonC;
+      this.DegreesF = DegreesF;
+      this.Kenvin = Kenvin;
+    }
+    setPoisonC(PoisonC){
+      return this.PoisonC = PoisonC;
+    }
+    getPoisonC(){
+      return this.PoisonC
+    }
+    setDegreesF(DegreesF){
+      DegreesF = (this.getPoisonC() *9)/5 + 32;
+      return this.DegreesF = DegreesF
+    }
+    getDegreesF(){
+      return this.DegreesF
+    }
+    setKenvin(Kenvin){
+      Kenvin = this.getPoisonC() + 273.15
+      return this.Kenvin = Kenvin
+    }
+    getKenvin(){
+      return this.Kenvin
+  }
+  }
+  let temperature = new Temperature();
+  temperature.setPoisonC(30);
+  temperature.setKenvin()
+  temperature.setDegreesF()
+  document.write("30 độ C sang độ F = " + temperature.getDegreesF() + "<br>" + "30 độ C sang độ K = " +  temperature.getKenvin())
+</script>
+</body>
+</html>

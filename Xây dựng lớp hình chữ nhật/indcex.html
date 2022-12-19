@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<div></div>
+<div style="text-align: center">
+    <h3>Nhập chiều dài</h3>
+    <input type="text" id ="height">
+    <h3>Nhập chiều rộng</h3>
+    <input type="text" id ="width">
+</div>
+<div style="text-align: center ; margin-top: 50px">
+<button onclick="DrawCreat()">
+    check
+</button>
+    <button onclick="Clear()"> Reset</button>
+</div>
+<div style="margin-top: 50px ; text-align: center">
+    <canvas id = "myCanvas" width=" 680px" height="500px" style="border: 1px solid"></canvas>
+</div>
+<script>
+  //Hình chữ nhật
+  let canvas = document.getElementById('myCanvas');
+  let ctx = canvas.getContext('2d');
+  console.log(canvas.width)
+  class HCN {
+      Width;
+      Height;
+      Perimeter;
+      Area;
+      constructor(Width, Height, Perimeter, Area) {
+          this.Width = Width;
+          this.Height = Height;
+          this.Perimeter = Perimeter;
+          this.Area = Area;
+          this.Draw = function (){
+              ctx.beginPath();
+              ctx.strokeStyle = 'black';
+              ctx.fillStyle = 'green';
+              ctx.fillRect(parseInt(canvas.width) /2 - this.Width / 2, parseInt(canvas.height) / 2 - this.Height / 2 ,this.Width, this.Height);
+              ctx.stroke();
+              ctx.fill();
+          }
+      }
+      setWidth(Width){
+           this.Width = Width;
+      }
+      setHeight(Height){
+          this.Height = Height;
+      }
+      setArea(Area){
+          Area = this.Width * this.Height;
+          this.Area = Area;
+          alert(" Diện tích hình chữ nhật là : "+Area)
+      }
+      setPerimeter(Perimeter){
+          Perimeter = (this.Height + this.Width) * 2;
+          this.Perimeter = Perimeter;
+          alert("Chu vi hình chữ nhật là : " + Perimeter)
+      }
+
+
+  }
+  function DrawCreat() {
+         let hcn = new HCN();
+          let Height = +document.getElementById('height').value;
+          let Width = +document.getElementById('width').value;
+          hcn.setWidth(Width)
+          hcn.setHeight(Height)
+      console.log(hcn.Width)
+      console.log(hcn.Height)
+          hcn.setArea()
+          hcn.setPerimeter()
+          hcn.Draw()
+          document.getElementById('height').value = "";
+        document.getElementById('width').value = "";
+
+  }
+  function Clear() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+  }
+  document.getElementById("width").addEventListener('keydown',function (keycode) {
+      if (keycode.keyCode == 13) {
+          DrawCreat();
+      }
+  })
+
+
+
+  //Kết thúc hình chữ nhật
+
+</script>
+</body>
+</html>

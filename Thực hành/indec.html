@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành OOP1</title>
+</head>
+<body>
+<script>
+    // class of people
+    class Who {
+        Eat;
+        Say;
+        Walk;
+        Run;
+        constructor(Eat, Say,Walk, Run) {
+            this.Eat = Eat;
+            this.Say = Say;
+            this.Walk = Walk;
+            this.Run = Run
+        }
+        setEat(Eat){
+            return this.Eat = Eat
+        }
+        getEat(){
+            return this.Eat
+        }
+        setSay(Say){
+            return this.Say = Say
+        }
+        getSay(){
+            return this.Say
+        }
+        setWalk(Walk){
+            return this.Walk = Walk
+        }
+        getWalk(){
+            return this.Walk
+        }
+        setRun(Run){
+            return this.Run = Run
+        }
+        getRun(){
+            return this.Run
+        }
+    }
+    let who = new Who();
+    who.setEat("Tôi thíc ăn cơm, canh, cá , thịt gà , rau xanh, các loại hoa quả");
+    who.setSay("Tôi đẹp trai nhất");
+    who.setRun("Tôi chạy rất nhanh");
+    who.setWalk("Tôi thương xuyên chạy bộ ở công viên")
+    document.write(who.getSay() +"<br>" +who.getRun() +"<br>" +who.getWalk() +"<br>"+who.getEat() +"<br>")
+
+    //End class of people
+
+    //My date
+    class Mydate{
+        Day;
+        Month;
+        Year;
+        constructor(Day, Month, Year) {
+            this.Day = Day;
+            this.Month = Month;
+            this.Year = Year;
+        }
+        setDay(Day){
+            return this.Day = Day;
+        }
+        getDay(){
+            return this.Day ;
+        }
+        setMonth(Month){
+            return this.Month = Month;
+        }
+        getMonth(){
+            return this.Month;
+        }
+        setYear(Year){
+            return this.Year = Year;
+        }
+        getYear(){
+            return this.Year;
+        }
+
+    }
+    let mydate = new Mydate();
+    mydate.setDay(15);
+    mydate.setMonth(3);
+    mydate.setYear(2003);
+    document.write('Ngày sinh của tôi là :  '+ mydate.getDay() + " / " + mydate.getMonth()+ " / " + mydate.getYear() +"<br>") ;
+
+    // End My date
+
+    // Circle
+    class Circle {
+        Radius;
+        Area;
+        constructor(Radius, Area) {
+            this.Radius = Radius;
+            this.Area = Area;
+        }
+        setRadius(Radius){
+            return this.Radius = Radius;
+        }
+        getRadius(){
+            return this.Radius;
+        }
+        setArea(Area){
+            Area = Math.PI * this.Radius * this.Radius;
+            return this.Area = Area;
+        }
+        getArea(){
+            return this.Area;
+        }
+    }
+    let circle = new Circle();
+    circle.setRadius(7);
+    circle.setArea();
+    document.write('Diện tích hình tròn có bán kính là 7 =  '+ circle.getArea()+ circle.getRadius());
+    // End Circle
+
+
+
+
+</script>
+</body>
+</html>

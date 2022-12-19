@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành vẽ hình tròn bằng Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width = "1400" height="768px" style="border: 1px solid #333"></canvas>
+<script>
+  // Vẽ hình tròn băng Canvas
+  function Circle(x,y,radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+  function creatCircle() {
+    let ctx  = document.getElementById("myCanvas").getContext("2d");
+    ctx.fillStyle = "yellow";
+    ctx.beginPath();
+    ctx.arc(700,400,80,0,2 * Math.PI);
+    ctx.stroke();
+    ctx.fill()
+    // ctx.fillRect(500,100,500,500)
+    console.log(ctx)
+  }
+  creatCircle()
+  // Kết thsuc vẽ hình tròn bằng Canvas
+</script>
+</body>
+</html>
